@@ -4,9 +4,31 @@ function createWarrantyPage(){
     let element;
     let label;
 
+// Create new link tag
+let link = document.createElement('link')
+
+// Set perperties of the link tag
+link.href = './style.css';
+link.rel = 'stylesheet';
+link.type = 'text/css';
+
+// Append link element to html
+document.body.appendChild(link);
+
+// Load checks
+link.onload = function() {
+    console.log('Success!');
+}
+
+// Error Check
+link.onerror = function() {
+    console.log('Error - failed to load CSS');
+}
+
+
     element = document.createElement('h3');
     element.innerHTML = '<h3>WhirlWind Warranty Registration<h3>'
-    document.body.appendChild(element);   
+    document.body.appendChild(element); 
 
     element = document.createElement('p');
     element.innerHTML = '<p>Streamline the repair process by completing your warranty registration today.<p>'
@@ -79,7 +101,7 @@ function createWarrantyPage(){
     element.innerHTML = 'City'
     document.body.appendChild(element);
     
-label = document.createElement('label');
+    label = document.createElement('label');
     label.innerHTML = "State"
     document.body.appendChild(label);
     element = document.createElement('input');

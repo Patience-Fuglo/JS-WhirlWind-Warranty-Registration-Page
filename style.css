@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
+}
+
+input {
+  max-width: 500px;
+  justify-content: center;
+  margin: auto;
+}
